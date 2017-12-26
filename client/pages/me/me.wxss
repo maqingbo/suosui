@@ -1,0 +1,79 @@
+/**
+ * @Date:   2017-12-25 17:14
+ * @Email:  wmaqingbo@163.com
+ * @Last modified time: 2017-12-26 15:00
+ */
+
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container {
+  padding: 0 40rpx;
+}
+
+.title {
+  width: 100%;
+  height: 160rpx;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.title-main {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 50rpx;
+  color: #888;
+  margin-top: 30rpx;
+}
+
+.title-minor {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #aaa;
+  margin-top: 10rpx;
+}
+
+.github, .blog, .site, .douban {
+    margin-top: 30rpx;
+    height: 140rpx;
+    width: 100%;
+    background: #FFF;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140rpx;
+    height: 140rpx;
+    font-size: 40rpx;
+}
+
+.fa-flash {
+  color: #ff9933;
+}
+
+.fa-glass {
+  color: #ef4d4d;
+}
+.fa-link {
+  color: #37bf4c;
+}
+
+.nickname {
+    font-size: 32rpx;
+    color: #007AFF;
+}

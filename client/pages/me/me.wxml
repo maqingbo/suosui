@@ -1,0 +1,51 @@
+<!--
+@Date:   2017-12-25 15:46
+@Email:  wmaqingbo@163.com
+@Last modified time: 2017-12-26 08:49
+-->
+
+<!--index.wxml-->
+<view class="container">
+    <!-- 自我介绍 -->
+    <view class="title">
+      <view class="title-main">关于我</view>
+      <view class="title-minor">Github 求 star ヾ(≧O≦)〃嗷~</view>
+    </view>
+
+    <view class="github">
+        <view>
+            <text class="fa fa-github"></text>
+        </view>
+        <view>
+            <text class="nickname">Github：wmaqingbo</text>
+        </view>
+    </view>
+
+    <view class="blog">
+        <view>
+            <text class="fa fa-glass"></text>
+        </view>
+        <view>
+            <text class="nickname">Blog：小马的日常琐碎</text>
+        </view>
+    </view>
+
+    <view class="site">
+        <view>
+            <text class="fa fa-flash"></text>
+        </view>
+        <view>
+            <text class="nickname">个人网站：maqingbo.top</text>
+        </view>
+    </view>
+
+    <view class="douban">
+        <view>
+            <text class="fa fa-link"></text>
+        </view>
+        <view>
+            <text class="nickname">豆瓣：wmaqingbo</text>
+        </view>
+    </view>
+
+</view>

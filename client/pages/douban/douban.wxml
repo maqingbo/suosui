@@ -1,0 +1,81 @@
+<!--
+@Date:   2017-12-26 10:30
+@Email:  wmaqingbo@163.com
+@Last modified time: 2017-12-26 16:51
+-->
+
+<!-- 加载中 -->
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <!-- <text class="weui-loading"/><text class="loading-text">加载中，请稍等</text> -->
+    <image mode="scaleToFill" src="../../imgs/loading.gif"></image>
+  </view>
+</block>
+
+<!-- 加载完成 -->
+<block wx:else>
+  <scroll-view style="height: 100%;" scroll-y="true" class="container film-list" bindscroll="scroll" bindscrolltolower="scrolltolower">
+
+    <!-- <view>
+      <text class="page-title">你所在的城市正在上映的电影~</text>
+    </view> -->
+
+    <!-- 循环出电影列表 -->
+    <block wx:for-items="{{films}}" wx:key="*this" wx:for-item="film">
+      <view class="film-item" bindtap="viewDetail" data-id="{{film.id}}" data-title="{{film.title}}">
+        <!-- 电影-图片 -->
+        <view class="film-image">
+          <image class="img" style="width: 100%; height: 100%;" mode="aspectFit" src="{{film.images.medium}}"></image>
+        </view>
+        <!-- 电影-介绍 -->
+        <view class="film-info">
+          <!-- 电影-名称 -->
+          <view>
+            <text class="film-title">{{film.title}}</text>
+            <!-- <text class="film-year">({{film.year}})</text> -->
+          </view>
+          <!-- 电影-评分 -->
+          <view class="film-rating">
+            <block wx:if="{{film.rating.average > 0}}">
+              <text class="label">豆瓣评分：</text>
+              <text class="rating">{{film.rating.average}}</text>
+            </block>
+            <block wx:else>
+              <text class="label">暂无评分</text>
+            </block>
+          </view>
+          <!-- 电影-导演 -->
+          <view class="directors">
+            <text class="label">导演：</text>
+            <block wx:for-items="{{film.directors}}" wx:key="*this" wx:for-item="director">
+              <text class="person">{{director.name}} </text>
+            </block>
+          </view>
+          <!-- 电影-主演 -->
+          <view class="casts">
+            <text class="label">主演：</text>
+            <block wx:for-items="{{film.casts}}" wx:key="*this" wx:for-item="cast">
+              <text class="person">{{cast.name}} </text>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 加载更多 -->
+    <view class="load-more-wrap">
+      <!-- 如果有更多，就加载更多 -->
+      <block wx:if="{{hasMore}}">
+        <view class="load-content">
+          <text class="weui-loading"/><text class="loading-text">玩命加载中</text>
+        </view>
+      </block>
+      <!-- 没有更多内容了 -->
+      <block wx:else>
+        <view class="load-content">
+          <text>没有更多内容了</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</block>
