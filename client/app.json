@@ -1,6 +1,7 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/douban/douban",
+    "pages/me/me"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
@@ -8,5 +9,21 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "小马的日常琐碎",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#37bf4c",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/douban/douban",
+      "text": "热映中",
+      "iconPath": "imgs/douban.png",
+      "selectedIconPath": "imgs/douban-d.png"
+    }, {
+      "pagePath": "pages/me/me",
+      "text": "关于我",
+      "iconPath": "imgs/me.png",
+      "selectedIconPath": "imgs/me-d.png"
+    }]
   }
 }
