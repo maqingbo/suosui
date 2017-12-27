@@ -1,0 +1,89 @@
+<!--
+@Date:   2017-12-26 17:24
+@Email:  wmaqingbo@163.com
+@Last modified time: 2017-12-26 21:24
+-->
+
+<!-- 加载中 -->
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <!-- <text class="weui-loading"/><text class="loading-text">加载中，请稍等</text> -->
+    <image mode="scaleToFill" src="../../imgs/loading.gif"></image>
+  </view>
+</block>
+
+<!-- 加载完成 -->
+<block wx:else>
+  <!-- 电影-详情页 -->
+  <view class="container film-detail">
+    <view class="film-item">
+      <!-- 图片 -->
+      <view class="film-image">
+        <image mode="aspectFit" src="{{film.images.medium}}"></image>
+      </view>
+      <!-- 介绍 -->
+      <view class="film-info">
+        <!-- 名称 -->
+        <view>
+          <text class="film-title">{{film.title}}</text>
+          <text class="film-year">({{film.year}})</text>
+        </view>
+        <!-- 评分 -->
+        <view class="film-rating">
+          <block wx:if="{{film.rating.average > 0}}">
+            <text class="label">评分：</text>
+            <text class="rating">{{film.rating.average}}</text>
+          </block>
+          <block wx:else>
+            <text class="label">暂无评分</text>
+          </block>
+        </view>
+        <!-- 导演 -->
+        <view class="directors">
+          <text class="label">导演：</text>
+          <block wx:for-items="{{film.directors}}" wx:for-item="director"  wx:key="*this">
+            <text class="person">{{director.name}}</text>
+          </block>
+        </view>
+        <!-- 主演 -->
+        <view class="casts">
+          <text class="label">主演：</text>
+          <block wx:for-items="{{film.casts}}" wx:for-item="cast" wx:key="*this">
+            <text class="person">{{cast.name}}</text>
+          </block>
+        </view>
+        <!-- 类型 -->
+        <view class="genres">
+          <text class="label">类型：</text>
+          <block wx:for-items="{{film.genres}}" wx:for-item="genre" wx:key="*this">
+            <text class="person">{{genre}}</text>
+          </block>
+        </view>
+        <!-- 地区 -->
+        <view class="genres">
+          <text class="label">国家/地区：</text>
+          <block wx:for-items="{{film.countries}}" wx:for-item="country" wx:key="*this">
+            <text class="person">{{country}}</text>
+          </block>
+        </view>
+        <!-- 标记人数 -->
+        <view class="collect-wish">
+          <view>
+            看过(<text>{{film.collect_count}}</text>)
+          </view>
+          <view>
+            想看(<text>{{film.wish_count}}</text>)
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 剧情简介 -->
+    <view class="summary">
+      <text class="title">剧情简介</text>
+      <view class="content">
+        {{film.summary}}
+      </view>
+    </view>
+  </view>
+</block>

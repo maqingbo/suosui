@@ -1,0 +1,88 @@
+/**
+ * @Date:   2017-12-26 17:24
+ * @Email:  wmaqingbo@163.com
+ * @Last modified time: 2017-12-26 21:29
+ */
+
+/* 加载界面 */
+.page-loading {
+  margin-top: 300rpx;
+}
+
+/* 加载完成 */
+.film-detail {
+  background-color: #fff;
+  margin: 25rpx;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+
+
+
+/* 图片 ======================================================================== */
+.film-image {
+  padding: 20rpx 0;
+  background-color: #f6f6f6;
+}
+
+/* 信息 =========================================================================*/
+.film-info {
+  padding: 25rpx;
+}
+
+.film-title {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: bold;
+  margin-right: 5rpx;
+}
+
+.film-year, .label {
+  font-size: 32rpx;
+  color: #666;
+}
+
+/* 评分 */
+.rating {
+  font-size: 32rpx;
+  color: #ffac2d;
+  font-weight: 800;
+}
+
+.film-rating, .genres, .directors, .casts, .collect-wish {
+  font-size: 32rpx;
+  /* color: #333; */
+  color: #666;
+  max-height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.casts {
+  max-height: 72rpx;
+  line-height: 36rpx;
+}
+.person::after {
+  content: "/";
+}
+.person:last-child::after {
+  content: "";
+}
+
+/* 剧情简介==================================================================== */
+.summary {
+  padding: 25rpx;
+}
+.summary .title {
+  font-size: 32rpx;
+  font-weight: 800;
+  color: #333;
+}
+.summary .content {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1.4;
+  margin-top: 10rpx;
+}

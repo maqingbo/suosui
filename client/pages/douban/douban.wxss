@@ -1,7 +1,7 @@
 /**
  * @Date:   2017-12-26 10:30
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2017-12-26 16:53
+ * @Last modified time: 2017-12-26 21:32
  */
 
 .page-loading {
@@ -27,8 +27,8 @@
 
 .film-item {
   background-color: #fff;
-  padding: 20rpx;
-  margin: 20rpx 20rpx 0 20rpx;
+  padding: 25rpx;
+  margin: 25rpx 25rpx 0 25rpx;
   border-radius: 4px;
   /* box-shadow: 3px 2px 8px rgba(0,0,0,.2); */
   box-shadow: 0 0 8px rgba(0,0,0,.2);
@@ -43,7 +43,7 @@
   display: inline-block;
   width: 200rpx;
   height: 280rpx;
-  margin-right: 20rpx;
+  margin-right: 25rpx;
   min-width: 200rpx;
   border-radius: 4px;
   overflow: hidden;
@@ -59,14 +59,15 @@
 
 .film-title {
   font-size: 40rpx;
+  color: #333;
   font-weight: bold;
   margin-right: 5rpx;
 }
-/* .film-year {
-  font-size: 30rpx;
-  font-weight: normal;
-  margin-right: 5rpx;
-} */
+
+.label {
+  color: #666;
+}
+
 /* 评分 */
 .rating {
   font-size: 32rpx;
@@ -75,10 +76,31 @@
   /* font-style: italic; */
 }
 
-.film-rating , .directors, .casts {
+.film-rating, .genres, .directors, .casts {
   font-size: 32rpx;
-  max-height: 64rpx;
-  line-height: 32rpx;
+  color: #666;
+  max-height: 34rpx;
+  line-height: 34rpx;
   overflow: hidden;
-  margin-top: 15rpx;
+  margin-top: 10rpx;
+}
+.casts {
+  max-height: 72rpx;
+  line-height: 36rpx;
+}
+.person::after {
+  content: "/";
+}
+.person:last-child::after {
+  content: "";
+}
+
+/* 上拉加载更多 */
+.load-more-wrap {
+  width: 100%;
+  height: 100rpx;
+  font-size: 24rpx;
+  color: #ccc;
+  line-height: 100rpx;
+  text-align: center;
 }

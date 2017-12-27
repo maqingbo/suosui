@@ -1,7 +1,7 @@
 /**
  * @Date:   2017-12-26 10:31
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2017-12-26 14:36
+ * @Last modified time: 2017-12-26 17:24
  */
 
 var functions = require('./function.js')
@@ -11,7 +11,7 @@ var pageSize = 20
 Page({
   data: {
     films: [],
-    hasMore: true,
+    hasMore: false,
     showLoading: true,
     start: 0
   },
@@ -35,6 +35,7 @@ Page({
       functions.fetchFilms.call(that, url, city, that.data.start, pageSize, function(data) {})
     })
   },
+  // 点击查看详情
   viewDetail: function(e) {
     var ds = e.currentTarget.dataset;
     wx.navigateTo({

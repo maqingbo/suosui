@@ -1,7 +1,7 @@
 <!--
 @Date:   2017-12-26 10:30
 @Email:  wmaqingbo@163.com
-@Last modified time: 2017-12-26 16:51
+@Last modified time: 2017-12-26 21:32
 -->
 
 <!-- 加载中 -->
@@ -44,18 +44,25 @@
               <text class="label">暂无评分</text>
             </block>
           </view>
+          <!-- 分类 -->
+          <view class="genres">
+            <text class="label">类型：</text>
+            <block wx:for-items="{{film.genres}}" wx:key="*this" wx:for-item="genre">
+              <text class="person">{{genre}}</text>
+            </block>
+          </view>
           <!-- 电影-导演 -->
           <view class="directors">
             <text class="label">导演：</text>
             <block wx:for-items="{{film.directors}}" wx:key="*this" wx:for-item="director">
-              <text class="person">{{director.name}} </text>
+              <text class="person">{{director.name}}</text>
             </block>
           </view>
           <!-- 电影-主演 -->
           <view class="casts">
             <text class="label">主演：</text>
             <block wx:for-items="{{film.casts}}" wx:key="*this" wx:for-item="cast">
-              <text class="person">{{cast.name}} </text>
+              <text class="person">{{cast.name}}</text>
             </block>
           </view>
         </view>
