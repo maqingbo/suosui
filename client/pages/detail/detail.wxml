@@ -1,14 +1,14 @@
 <!--
 @Date:   2017-12-26 17:24
 @Email:  wmaqingbo@163.com
-@Last modified time: 2017-12-26 21:24
+@Last modified time: 2017-12-27 10:39
 -->
 
 <!-- 加载中 -->
 <block wx:if="{{showLoading}}">
   <view class="page-loading">
     <!-- <text class="weui-loading"/><text class="loading-text">加载中，请稍等</text> -->
-    <image mode="scaleToFill" src="../../imgs/loading.gif"></image>
+    <image class="loadinggif" src="../../imgs/loading.gif"></image>
   </view>
 </block>
 

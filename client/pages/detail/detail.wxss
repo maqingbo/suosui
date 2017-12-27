@@ -1,13 +1,22 @@
 /**
  * @Date:   2017-12-26 17:24
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2017-12-26 21:29
+ * @Last modified time: 2017-12-27 10:51
  */
 
-/* 加载界面 */
-.page-loading {
-  margin-top: 300rpx;
-}
+ /* loading 界面 */
+  .page-loading {
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    margin-top: 400rpx;
+  }
+  .loadinggif {
+    width: 400rpx;
+    height: 300rpx;
+  }
 
 /* 加载完成 */
 .film-detail {
