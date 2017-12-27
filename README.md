@@ -7,4 +7,4 @@
 - 纯属练手，仅供娱乐
 - 目前小程序还在审核中，界面可参考以下图片
 
-<img style="width:300px" src="./pic/suosui01.png"><img style="width:300px" src="./pic/suosui02.png"><img style="width:300px" src="./pic/suosui03.png">
+![列表页](./pic/suosui01.png)![详情页](./pic/suosui02.png)![关于我](./pic/suosui03.png)
