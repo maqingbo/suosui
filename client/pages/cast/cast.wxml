@@ -1,0 +1,19 @@
+<!--
+@Date:   2018-01-01 11:43
+@Email:  wmaqingbo@163.com
+@Last modified time: 2018-01-01 12:32
+-->
+
+<!-- 加载中 -->
+<block wx:if="{{showLoading}}">
+  <view class="page-loading">
+    <!-- <text class="weui-loading"/><text class="loading-text">加载中，请稍等</text> -->
+    <image class="loadinggif" src="../../imgs/loading.gif"></image>
+  </view>
+</block>
+
+<block wx:else>
+  <view>
+    <text>{{cast.name}}/{{cast.gender}}</text>
+  </view>
+</block>

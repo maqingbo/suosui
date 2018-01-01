@@ -1,7 +1,7 @@
 /**
  * @Date:   2017-12-26 17:24
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2017-12-27 10:51
+ * @Last modified time: 2018-01-01 11:58
  */
 
  /* loading 界面 */
@@ -21,10 +21,10 @@
 /* 加载完成 */
 .film-detail {
   background-color: #fff;
-  margin: 25rpx;
+  /* margin: 25rpx;
   border: 1px solid rgba(0,0,0,.2);
   border-radius: 6px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 8px rgba(0,0,0,.2); */
   overflow: hidden;
 }
 
@@ -34,6 +34,8 @@
 .film-image {
   padding: 20rpx 0;
   background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
 }
 
 /* 信息 =========================================================================*/
@@ -75,9 +77,15 @@
 }
 .person::after {
   content: "/";
+  color: #666;
 }
 .person:last-child::after {
   content: "";
+}
+/* 演员名字伪装成链接的样式 */
+.nickname {
+  font-size: 32rpx;
+  color: #007AFF;
 }
 
 /* 剧情简介==================================================================== */

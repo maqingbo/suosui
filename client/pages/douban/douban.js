@@ -1,7 +1,7 @@
 /**
  * @Date:   2017-12-26 10:31
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2017-12-26 17:24
+ * @Last modified time: 2018-01-01 12:14
  */
 
 var functions = require('./function.js')
@@ -38,6 +38,7 @@ Page({
   // 点击查看详情
   viewDetail: function(e) {
     var ds = e.currentTarget.dataset;
+    // console.log(ds);
     wx.navigateTo({
       url: '../detail/detail?id=' + ds.id + '&title=' + ds.title + '&type=ing'
     })

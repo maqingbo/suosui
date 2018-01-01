@@ -2,7 +2,8 @@
   "pages":[
     "pages/douban/douban",
     "pages/me/me",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/cast/cast"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
