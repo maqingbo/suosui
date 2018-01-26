@@ -1,5 +1,21 @@
 /**
  * @Date:   2018-01-01 11:44
  * @Email:  wmaqingbo@163.com
- * @Last modified time: 2018-01-01 12:00
+ * @Last modified time: 2018-01-01 20:05
  */
+
+ /* loading 界面 */
+  .page-loading {
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    margin-top: 400rpx;
+  }
+  .loadinggif {
+    width: 400rpx;
+    height: 300rpx;
+  }
+
+/* 加载完成 */

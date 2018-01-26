@@ -1,7 +1,7 @@
 <!--
 @Date:   2018-01-01 11:43
 @Email:  wmaqingbo@163.com
-@Last modified time: 2018-01-01 12:32
+@Last modified time: 2018-01-01 18:06
 -->
 
 <!-- 加载中 -->
@@ -12,6 +12,7 @@
   </view>
 </block>
 
+<!-- 加载完成 -->
 <block wx:else>
   <view>
     <text>{{cast.name}}/{{cast.gender}}</text>

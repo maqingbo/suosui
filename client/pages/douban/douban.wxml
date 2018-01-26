@@ -1,7 +1,7 @@
 <!--
 @Date:   2017-12-26 10:30
 @Email:  wmaqingbo@163.com
-@Last modified time: 2018-01-01 12:33
+@Last modified time: 2018-01-08 22:28
 -->
 
 <!-- 加载中 -->
@@ -16,9 +16,9 @@
 <block wx:else>
   <scroll-view style="height: 100%;" scroll-y="true" class="container film-list" bindscroll="scroll" bindscrolltolower="scrolltolower">
 
-    <!-- <view>
-      <text class="page-title">你所在的城市正在上映的电影~</text>
-    </view> -->
+    <view class="city">
+      <text class="page-title">您所在的城市：{{city}}</text>
+    </view>
 
     <!-- 循环出电影列表 -->
     <block wx:for-items="{{films}}" wx:key="*this" wx:for-item="film">
