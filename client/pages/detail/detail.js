@@ -14,7 +14,7 @@ Page({
     var that = this
     wx.setNavigationBarTitle({title: options.title})
     wx.request({
-      url: 'https://api.douban.com/v2/movie/subject/' + options.id,
+      url: 'https://api.douban.com/v2/movie/subject/' + options.id + '?apikey=0b2bdeda43b5688921839c8ecb20399b',
       header: {
         'content-type': 'json'
       },

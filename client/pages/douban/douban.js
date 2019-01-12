@@ -27,12 +27,16 @@ Page({
   onLoad: function() {
     var that = this
     functions.getCity(function(city) {
-      // let that.city = city
+      // console.log(city)
+      that.setData({city: city})
       functions.fetchFilms.call(that, url, city, 0, count, function(data) {
+        // console.log(data)
+        that.setData({start: data.count+1})
         that.setData({showLoading: false})
       })
     })
   },
+  // 下拉刷新？
   scrolltolower: function() {
     var that = this
     functions.getCity(function(city) {

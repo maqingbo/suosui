@@ -50,8 +50,9 @@ module.exports = {
   // 从豆瓣获取用户所在城市的热映电影
   fetchFilms: function (url, city, start, count, cb) {
     var that = this
+    // apikey为固定值
     wx.request({
-      url: url + '?city=' + city + '&start=' + start + '&count=' + count,
+      url: url + '?apikey=0b2bdeda43b5688921839c8ecb20399b' + '&city=' + city + '&start=' + start + '&count=' + count,
       header: {
         "Content-Type": "json",
       },
