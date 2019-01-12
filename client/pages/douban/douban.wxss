@@ -20,7 +20,7 @@
 
 /* 列表 */
 .film-list {
-  background-color: #f0f0f0;
+  background-color: #fafafa;
 }
 
 .city {
@@ -35,11 +35,16 @@
 }
 
 .film-item {
+  width: 93%;
+  min-height: 200rpx;
   background-color: #fff;
+  box-sizing: border-box;
   padding: 25rpx;
-  margin: 25rpx 25rpx 0 25rpx;
-  /* border-radius: 4px; */
-  /* box-shadow: 0 0 8px rgba(0,0,0,.2); */
+  padding-left: 250rpx;
+  padding-right: 25rpx;
+  margin: 130rpx auto 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
 
   display: flex;
   justify-content: flex-start;
@@ -48,24 +53,38 @@
 }
 /* 电影-图片 */
 .film-image {
+  position: absolute;
+  left: 25rpx;
+  bottom: 25rpx;
+  background-color: #f0f0f0;
   display: inline-block;
   width: 200rpx;
   height: 280rpx;
-  margin-right: 25rpx;
-  min-width: 200rpx;
+  border-radius: 8px;
   overflow: hidden;
+}
+
+.film-image image {
+  width: 200rpx;
+  height: 280rpx;
 }
 
 /* 电影-介绍 */
 .film-info {
   display: inline-block;
+  position: relative;
+}
+
+/* 电影名字 */
+
+.film-title-wrap {
+  margin-bottom: 30rpx;
 }
 
 .film-title {
   font-size: 36rpx;
   color: #333;
   font-weight: bold;
-  margin-right: 5rpx;
 }
 
 .label {
@@ -73,20 +92,36 @@
 }
 
 /* 评分 */
+.film-rating {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -80rpx;
+  top: 0;
+}
+
 .rating {
-  font-size: 28rpx;
+  font-size: 40rpx;
   color: #ffac2d;
   font-weight: 800;
   /* font-style: italic; */
 }
 
-.film-rating, .genres, .directors, .casts {
-  font-size: 28rpx;
-  color: #666;
-  max-height: 30rpx;
-  line-height: 30rpx;
+.film-title-wrap, .genres, .directors, .casts, .pubdate {
+  width: 340rpx;
   overflow: hidden;
-  margin-top: 10rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.genres, .directors, .casts, .pubdate {
+  font-size: 22rpx;
+  color: #666;
+  height: 32rpx;
+  line-height: 32rpx;
 }
 .casts {
   max-height: 64rpx;

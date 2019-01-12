@@ -1,17 +1,15 @@
-/**
- * @Date:   2017-12-26 10:31
- * @Email:  wmaqingbo@163.com
- * @Last modified time: 2018-01-08 22:33
- */
-
 var functions = require('./functions.js')
 var store = require('./store.js')
+// 本地测试地址
+// var film_list = require('../mock/filmlist.js')
 var url = 'https://api.douban.com/v2/movie/in_theaters'
 var count = 20
 Page({
   data: {
     city: "",
     films: [],
+    // 本地测试数据
+    // films: film_list.film_list.subjects,
     hasMore: false,
     showLoading: true,
     start: 0
