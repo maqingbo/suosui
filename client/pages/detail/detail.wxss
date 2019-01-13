@@ -20,86 +20,199 @@
 
 /* 加载完成 */
 .film-detail {
+  width: 100%;
+  min-height: 100%;
   background-color: #fff;
-  /* margin: 25rpx;
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 6px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,.2); */
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+
+.film-item {
+  width: 100%;
+  height: auto;
+  position: relative;
   overflow: hidden;
 }
 
+/* 背景层 */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  filter: blur(6px);
+  transform: scale(1.1);
+}
 
-
-/* 图片 ======================================================================== */
-.film-image {
-  padding: 20rpx 0;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
+.mask > image {
+  width: 100%;
+  height: 100%;
 }
 
 /* 信息 =========================================================================*/
 .film-info {
-  padding: 25rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  box-sizing: border-box;
+  padding: 80rpx 30rpx;
+  overflow: hidden;
 }
+
+/* 图片 ======================================================================== */
+.film-image {
+  float: left;
+  width: 200rpx;
+  height: 280rpx;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(255,255,255,.4);
+}
+
+.film-image > image {
+  width: 200rpx;
+  height: 280rpx;
+}
+
+/* 其他介绍 ================================*/
+
+.film-info .other_info {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50rpx;
+  color: #fff;
+}
+
+/* 名字 */
 
 .film-title {
-  font-size: 40rpx;
-  color: #333;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 34rpx;
   font-weight: bold;
-  margin-right: 5rpx;
 }
 
-.film-year, .label {
-  font-size: 32rpx;
-  color: #666;
+/* 分数 */
+.film-rating {
+  margin-top: 15rpx;
 }
-
-/* 评分 */
 .rating {
-  font-size: 32rpx;
+  font-size: 40rpx;
   color: #ffac2d;
   font-weight: 800;
 }
-
-.film-rating, .genres, .directors, .casts, .collect-wish {
-  font-size: 32rpx;
-  /* color: #333; */
-  color: #666;
-  max-height: 34rpx;
-  line-height: 34rpx;
-  overflow: hidden;
-  margin-top: 10rpx;
+.ratings_count {
+  font-size: 24rpx;
 }
-.casts {
-  max-height: 72rpx;
-  line-height: 36rpx;
+
+.genres {
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  margin-top: 15rpx;
+}
+.collect-wish {
+  margin-top: 15rpx;
+}
+.collect_tag, .collect_tag2 {
+  font-size: 24rpx;
+  padding: 7rpx 20rpx;
+  border: 1px solid #ffac2d;
+  border-radius: 10rpx;
+}
+.collect_tag2 {
+  margin-left: 15rpx;
 }
 .person::after {
   content: "/";
-  color: #666;
+  color: #fff;
 }
 .person:last-child::after {
   content: "";
 }
-/* 演员名字伪装成链接的样式 */
-.nickname {
-  font-size: 32rpx;
-  color: #007AFF;
-}
 
-/* 剧情简介==================================================================== */
+/* 剧情简介 ============================================= */
 .summary {
   padding: 25rpx;
 }
-.summary .title {
-  font-size: 32rpx;
-  font-weight: 800;
+.summary_content {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.5;
+  /* text-indent: 2em; */
+}
+
+/* 间隔 */
+.gap {
+  width: 100%;
+  height: 30rpx;
+  background-color: #f6f6f6;
+}
+
+/* 标签 ==================================================*/
+.tags {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 25rpx;
+  box-sizing: border-box;
+}
+
+.tags_tag {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  padding: 5rpx 15rpx;
+  /* border: 1px solid #eee; */
+  border: 1px solid #ffac2d;
+  border-radius: 24rpx;
+  margin: 10rpx;
+}
+
+/* 演职员表 ======================================*/
+.casts {
+  height: 300rpx;
+  background-color: #ffffff;
+  padding-left: 25rpx;
+}
+
+.casts_cast {
+  float: left;
+  margin-right: 15rpx;
+}
+
+.cast_title {
+  width: 100%;
+  padding: 10rpx 25rpx;
+  font-size: 26rpx;
   color: #333;
 }
-.summary .content {
-  font-size: 32rpx;
-  color: #333;
-  line-height: 1.4;
-  margin-top: 10rpx;
+
+.cast_pic {
+  width: 160rpx;
+  height: 220rpx;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cast_pic image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.cast_name {
+  width: 160rpx;
+  height: auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  color: #555;
 }

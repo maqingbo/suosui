@@ -1,16 +1,14 @@
-/**
- * @Date:   2017-12-26 17:24
- * @Email:  wmaqingbo@163.com
- * @Last modified time: 2018-01-01 20:03
- */
-
+// 本地测试地址
+var film = require('../mock/film.js')
 Page({
   data: {
     film: {},
+    // film: film.film,
     showLoading: true,
     options: null
   },
   onLoad: function(options) {
+    // console.log(this.data.film)
     var that = this
     wx.setNavigationBarTitle({title: options.title})
     wx.request({
@@ -20,7 +18,7 @@ Page({
       },
       success: function(res) {
         var data = res.data
-        // console.log(data);
+        console.log(data);
         that.setData({film: data, showLoading: false})
       }
     })

@@ -15,64 +15,46 @@
 <!-- 加载完成 -->
 <block wx:else>
   <!-- 电影-详情页 -->
-  <view class="container film-detail">
+  <scroll-view style="height: 100%;" scroll-y="true" class="container film-detail">
     <view class="film-item">
-      <!-- 图片 -->
-      <view class="film-image">
-        <image mode="aspectFit" src="{{film.images.medium}}"></image>
+      <view class="mask">
+        <image mode="aspectFill" src="{{film.images.medium}}"></image>
       </view>
       <!-- 介绍 -->
       <view class="film-info">
-        <!-- 名称 -->
-        <view>
-          <text class="film-title">{{film.title}}</text>
-          <text class="film-year">({{film.year}})</text>
+        <!-- 图片 -->
+        <view class="film-image">
+          <image mode="aspectFit" src="{{film.images.medium}}"></image>
         </view>
-        <!-- 评分 -->
-        <view class="film-rating">
-          <block wx:if="{{film.rating.average > 0}}">
-            <text class="label">评分：</text>
-            <text class="rating">{{film.rating.average}}</text>
-          </block>
-          <block wx:else>
-            <text class="label">暂无评分</text>
-          </block>
-        </view>
-        <!-- 导演 -->
-        <view class="directors">
-          <text class="label">导演：</text>
-          <block wx:for-items="{{film.directors}}" wx:for-item="director"  wx:key="*this">
-            <text class="person">{{director.name}}</text>
-          </block>
-        </view>
-        <!-- 主演 -->
-        <view class="casts">
-          <text class="label">主演：</text>
-          <block wx:for-items="{{film.casts}}" wx:for-item="cast" wx:key="*this">
-            <text class="person nickname"  bindtap="viewCast" data-id="{{cast.id}}" data-name="{{cast.name}}">{{cast.name}}</text>
-          </block>
-        </view>
-        <!-- 类型 -->
-        <view class="genres">
-          <text class="label">类型：</text>
-          <block wx:for-items="{{film.genres}}" wx:for-item="genre" wx:key="*this">
-            <text class="person">{{genre}}</text>
-          </block>
-        </view>
-        <!-- 地区 -->
-        <view class="genres">
-          <text class="label">国家/地区：</text>
-          <block wx:for-items="{{film.countries}}" wx:for-item="country" wx:key="*this">
-            <text class="person">{{country}}</text>
-          </block>
-        </view>
-        <!-- 标记人数 -->
-        <view class="collect-wish">
-          <view>
-            看过(<text>{{film.collect_count}}</text>)
+        <view class="other_info">
+          <!-- 名称 -->
+          <view class="film-title">
+            <text>{{film.title}}</text>
           </view>
-          <view>
-            想看(<text>{{film.wish_count}}</text>)
+          <!-- 评分 -->
+          <view class="film-rating">
+            <block wx:if="{{film.rating.average > 0}}">
+              <text class="rating">{{film.rating.average}}</text>
+            </block>
+            <block wx:else>
+              <text class="label">暂无评分</text>
+            </block>
+            <text class="ratings_count">（{{film.ratings_count}}人评分）</text>
+          </view>
+          <!-- 类型 -->
+          <view class="genres">
+            <block wx:for-items="{{film.genres}}" wx:for-item="genre" wx:key="*this">
+              <text class="person">{{genre}}</text>
+            </block>
+          </view>
+          <!-- 地区 -->
+          <view class="genres">
+            <text class="person">{{film.pubdate}} 上映</text>
+          </view>
+          <!-- 标记人数 -->
+          <view class="collect-wish">
+            <text class="collect_tag">看过 : {{film.collect_count}}</text>
+            <text class="collect_tag2">想看 : {{film.wish_count}}</text>
           </view>
         </view>
       </view>
@@ -80,10 +62,30 @@
 
     <!-- 剧情简介 -->
     <view class="summary">
-      <text class="title">剧情简介</text>
-      <view class="content">
+      <view class="summary_content">
         {{film.summary}}
       </view>
     </view>
-  </view>
+
+    <view class="gap"></view>
+
+    <!-- 标签 -->
+    <view class="tags">
+      <view class="tags_tag" wx:for-items="{{film.tags}}" wx:for-item="tag" wx:key="*this">
+        {{tag}}
+      </view>
+    </view>
+
+    <view class="gap"></view>
+
+    <view class="cast_title">演职员表</view>
+    <scroll-view scroll-x="true" style="width:100%" class="casts">
+      <view class="casts_cast" wx:for-items="{{film.casts}}" wx:for-item="cast" wx:key="{{cast.id}}">
+        <view class="cast_pic">
+          <image mode="aspectFit" src="{{cast.avatars.small}}"></image>
+        </view>
+        <view class="cast_name">{{cast.name}}</view>
+      </view>
+    </scroll-view>
+  </scroll-view>
 </block>
